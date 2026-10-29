@@ -1,0 +1,116 @@
+1. Concept
+One-liner: A cute pet-rescue bubble shooter. Shoot colored bubbles, match 3 or more, free puppies and kittens trapped inside bubbles, then collect them and bring them home.
+Target market: United States, Canada, UK, Australia and Europe. iOS and Android, English at launch.
+Why it can win
+•	Dogs and kittens have broad appeal with Western casual players, and a collect-and-care loop gives them a reason to come back every day.
+•	New levels every week and a weekly event keep the game fresh.
+•	Light build (under 100 MB) with fast load times. Panda Pop is 274 MB.
+•	Fewer forced ads, with rewarded ads as the main ad format.
+2. Core loop
+Aim → shoot → match 3+ → floating bubbles drop → goal met within the shot limit → stars + coins → next level.
+Target session: 5 to 8 minutes, about 10 levels.
+3. Level goals
+•	Paw Points: reach a score within a limited number of shots.
+•	Pet Rescue: free X puppies or kittens trapped inside bubbles by popping or dropping those bubbles.
+•	Treat Collect: pop the bubbles next to bones and fish to collect a set number of treats.
+•	Boss Level: a fixed wall with limited shots and a bigger reward.
+Later levels combine two goals.
+4. Bubble and blocker types
+Type	Behavior	Introduced
+Standard (3 to 5 colors)	Match 3+ to pop	Level 1
+Pet bubble	Frees the puppy or kitten when popped or dropped	Level 3
+Treat (bone or fish)	Collected when adjacent bubbles pop	Level 6
+Yarn tangle	Needs 2 hits	Level 7
+Napping	Wakes and changes color after 3 turns	Level 12
+Bone bomb	Clears a radius when popped	Level 14
+Moving ceiling	Drops one row every 8 shots	Level 15
+Rainbow yarn	Matches any color	Level 17
+5. Boosters
+•	Mega Bone Bomb: clears a large radius.
+•	Fish Line: clears a full row.
+•	Rainbow Yarn Ball: matches any color.
+•	Extra Shots: +5 shots after a near miss.
+•	Aim Guide: shows the bounce path for one shot.
+6. Sample levels (first 20)
+#	Goal	Shots	Colors	New element	Design note
+1	Paw Points 1,500	25	3	Aim and shoot	Tutorial, very hard to fail
+2	Paw Points 2,500	25	3	Wall bounce	Teach bank shots
+3	Rescue x1	25	3	Pet bubble	First drop mechanic
+4	Paw Points 3,500	22	4	4th color	Slight difficulty rise
+5	Rescue x2	24	4	None	Easy gift level, reward chest
+6	Treats x3	24	4	Treat bubbles	Teach adjacent pops
+7	Paw Points 5,000	22	4	Yarn tangle	Teach double hits
+8	Rescue x2 + Treats x2	26	4	Combined goals	First two-goal level
+9	Paw Points 6,000	22	5	5th color	First real challenge, hint a booster
+10	Boss: Pound Break (clear all)	30	4	Fixed wall	Difficulty spike, give a free booster
+11	Rescue x3	24	4	None	Breather after boss
+12	Paw Points 5,500	24	4	Napping bubble	Planning matters
+13	Treats x4	24	5	Napping + treats	Mix of mechanics
+14	Rescue x2	22	5	Bone bomb	Teach chain reactions
+15	Paw Points 7,000	22	5	Moving ceiling	Introduce time pressure
+16	Rescue x3 + Treats x2	26	5	Yarn + pet bubble	Hard two-goal level
+17	Paw Points 8,000	22	5	Rainbow yarn	Combo-fest, feels generous
+18	Treats x5	24	5	Narrow lanes	Precision aiming
+19	Rescue x4	25	5	Layered cluster	Drop-planning level
+20	Boss: Big Dog Showdown (Paw Points 10,000 + rescue x3)	32	5	Everything	End of World 1, big reward
+Design rules
+•	Introduce one new element every 2 to 3 levels.
+•	Boss level every 10 levels.
+•	Every 5th level is an easy gift level to keep players feeling good.
+•	Aim for about an 85% win rate in the first 10 levels, falling to 55 to 65% on hard levels.
+•	Store levels as JSON files so they can be tuned remotely without an app update.
+7. Meta progression
+•	Worlds: Backyard, Animal Shelter, Pet Town, each with its own art and music.
+•	Collectible pets: original puppies and kittens, each with a small perk (e.g. +1 starting shot) and costumes to unlock. Collected from chests and events.
+•	Pet Home: spend stars to decorate a home for your rescued pets and keep players returning.
+•	Daily streak chest and a daily puzzle with the same layout for everyone and a leaderboard.
+•	Weekly events: Adopt-a-Pet Week.
+•	Lives: 5 lives that refill over time or through rewarded ads.
+8. Monetization
+Principles: free to play. Ads are rewarded, not forced.
+Ads
+•	Rewarded video: extra 5 shots, free booster, double coins, life refill.
+•	Interstitials: none before level 15, then at most one every 3 levels, never mid-level.
+•	Use ad mediation (e.g. AdMob plus a second network) to improve fill rate and ad revenue.
+In-app purchases (prices are starting points to test)
+Product	Idea	Starting price (USD)
+Starter pack	Coins + 3 boosters, one-time	$1.99 to $2.99
+Coin packs	4 to 5 tiers	$0.99 to $19.99
+Season Pass	Free and premium reward track	$4.99 to $6.99
+Remove Ads	One-time purchase	$4.99 to $7.99
+Unlimited lives (1 hour / 1 day)	Impulse buy	$0.99 to $1.99
+Test each price point with A/B tests during soft launch, since Western players respond strongly to starter-pack offers.
+Payments: standard App Store and Google Play billing.
+9. Tech and art
+•	Engine: Unity 2D.
+•	Targets: iOS and Android, 60 fps, base build under 100 MB. Download worlds on demand.
+•	Backend: Firebase for analytics, remote config and cloud save.
+•	Languages: English at launch. Add Spanish, French, German and Portuguese later.
+•	Art: bright, soft cartoon style with original puppies and kittens. Do not copy Panda Pop's pandas or any existing pet game's characters.
+9a. Look and feel
+•	Top bar: pet icon with pets rescued, a 3-star progress bar, score and a pause button.
+•	Board: glossy paw-print bubbles. Pets sit inside bubbles, and some levels are laid out as shapes such as a heart.
+•	Hero: a cat or dog holds the next bubble in a blossom meadow, with a swap crate showing shots left, cheering pets on the side and locked booster slots at the bottom.
+•	Style: bright, soft and glossy. All characters and art are original.
+•	Playable prototype: Paw Pop prototype with 5 levels (score and pet rescue goals).
+10. Starting KPI targets (validate in soft launch)
+•	Day 1 retention: 35 to 40%
+•	Day 7 retention: 10 to 15%
+•	Average session: 6 to 8 minutes
+•	Rewarded ad opt-in: 30%+ of daily active users
+•	Level 10 completion: 60%+ of new installs
+11. 8-week roadmap
+Week	Focus
+1	Prototype: shooting, aiming, bounce, matching
+2	Drop physics, goals, first 5 levels
+3	Level data pipeline, all 20 levels
+4	Boosters and blockers
+5	UI, level map, coins, lives
+6	Ads, IAP, analytics
+7	Polish and device testing
+8	Soft launch in Canada or Australia, then iterate on data
+12. Next steps
+•	Confirm the name and check trademark availability.
+•	Build the week 1 prototype.
+•	Design a mascot set (3 characters) before art production.
+•	Playtest levels 1 to 10 with 10 to 20 real players before building more.
